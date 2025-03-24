@@ -18,5 +18,17 @@ SELECT name FROM Passenger
 WHERE name LIKE '%man';
 
 
+Задание 5: Вывести количество рейсов, совершенных на TU-134
+SELECT DISTINCT COUNT('plane') AS count FROM Trip
+WHERE plane LIKE 'TU-134';
+
+
+Задание 6: Какие компании совершали перелеты на Boeing
+SELECT DISTINCT c.name
+FROM Trip AS t
+JOIN Company AS c ON t.company = c.id
+WHERE t.plane = 'Boeing'
+
+
 	
 comment	https://dzen.ru/a/YNoFr5fbbjotOw6O
